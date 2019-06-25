@@ -1,0 +1,85 @@
+/*公用样式*/
+html, body, div, h1, h2, h3, h4, h5, h6, p, span, em, a, img, ul, li, ol, form, button, input, textarea, dl, dt, dd, iframe { margin: 0; padding: 0; }
+body { text-align: left; font: 13px/1.5 "\5FAE\8F6F\96C5\9ED1", tahoma, arial, "Hiragino Sans GB", "\5b8b\4f53"; background: url(../images/101010.png) top center repeat-y;color: #5f646a; }
+a { cursor: pointer; color: #5e2100; text-decoration: none; outline: 0 none; }
+a:hover, a:focus { text-decoration: none; color: #CD2407; }
+h1, h2, h3, h4, h5, h6, em { font-size: 14px; font-weight: normal; }
+ol, ul { list-style: none; }
+em, i { font-style: normal; }
+img { border: 0; vertical-align: middle; }
+table { border-collapse: collapse; }
+.clear { clear: both; margin: 0; padding: 0; }
+.fl { float: left; }
+.fr { float: right; }
+a, input { -webkit-transition: all .3s; -moz-transition: all .3s; -ms-transition: all .3s; -o-transition: all .3s; transition: all .3s; }
+
+/*开始*/
+/**/
+
+/*活动开始（时时反水）*/
+/**/
+/*弹窗开始*/
+/* .black{ position: fixed; left: 0px; top: 0px; width: 100%; background:#000; opacity: 0.7;  filter:alpha(opacity=70); height: 100%; display:none;}
+.pop_black { position: fixed; left: 0px; top: 0px; width: 100%; background: url(../images/hei.png); height: 100%; }
+.pop-ups { position: absolute; left: 50%; margin-left: -370px; top: 50%; margin-top: -230px; z-index: 999; }
+.pop_t { height: 11px; width: 685px; background: url(../images/script.png) no-repeat 0px -431px; }
+.pop_c { width: 852px; background: url(../images/pop_bg.png) top center no-repeat #34226a;overflow: hidden; position: relative; border-radius: 5px; padding: 30px 0 40px 0;  }
+.pop_b { height: 11px; width: 685px; background: url(../images/script.png) no-repeat 0px -442px; }
+.pop_closed { background: url(../images/close.png) no-repeat; width: 21px; height: 21px; position: absolute; right: 10px; top: 10px; display: block; cursor: pointer; }
+.pop_logo { background: url(../images/pop_logo.png) no-repeat top center; width:626px; height:73px; margin: 40px auto 30px auto; }
+.pop_title { background: url(../images/script.png) no-repeat -237px -99px; width: 540px; height: 17px; margin: 31px auto 0px; text-align: center; color: #c29d5b; font-size: 25px; line-height: 17px; }
+.pop_con { margin: 20px auto; }
+.pop_con ul {max-height:300px;   overflow-y: auto; overflow-x: hidden;}
+.pop_con ul li { height: 45px; line-height: 45px; margin-left:200px;  margin-bottom: 10px;}
+.pop_con ul li span { display: block; float: left; width: 130px; text-align: right; vertical-align: middle; line-height: 45px; color: #fff; font-size: 16px; margin-right: 10px; }
+.pop_con ul li .input { width: 290px; height: 38px; border: none; background: #f9f9f9; text-align: left; color: #959595; font-size: 14px; padding-left: 15px; border-radius: 5px; }
+.pop_con ul li select { width: 305px; height: 38px; border: none; background: #f9f9f9; color: #000; font-size: 14px; padding-left: 13px; border-radius: 5px; }
+.pop_con ul li select option { padding-left: 13px; }
+.pop_con ul li em { color: #dcb671; display: inline-block; vertical-align: middle; line-height: 45px; font-size: 12px; margin-left: 10px; }
+.pop_con .hd_title { width: 223px; height: 33px; padding-left: 10px; line-height: 33px; vertical-align: middle; border-radius: 5px; border: 1px solid #373737; color: #b9b9b9; display: inline-block; }
+.pop_con .hd_title_xq { width: 73px; height: 35px; line-height: 35px; vertical-align: middle; text-align: center; color: #dcb671; background: #981f06; display: inline-block; float: right; border-top-right-radius: 5px; border-bottom-right-radius: 5px; }
+.pop_con .hd_title_xq:hover { color: #981f06; background: #dcb671; }
+.pop_con ul li .yzmimg { /*position: relative; margin-left: -60px; vertical-align: middle; top: 0px;width:90px; height:35px; font:14px/35px '微软雅黑';  text-align: center;}*/
+.pop_con center { margin-top: 20px; }
+.btn_input { width: 206px; height: 52px; background: url(../images/script.png) no-repeat; border: none; cursor: pointer; display: inline-block; margin: 0px 8px; }
+.btn_submit { background-position: 0px -126px; }
+.btn_submit:hover { background-position: 0px -178px; }
+.btn_goback { background-position: -206px -126px; }
+.btn_goback:hover { background-position: -206px -178px; }
+.btn_search { background-position: 0px -230px; }
+.btn_search:hover { background-position: 0px -282px; }
+.hd_cont_t { width: 1000px; height: 9px; background: url(../images/hd_conk.jpg) repeat-x; }
+.hd_cont_c { background: #333; border-left: 5px solid #e7342d; border-right: 5px solid #e7342d; padding: 20px 17px; }
+.hd_cont_c .tit_line { border-top: 1px solid #434343; border-bottom: 1px solid #434343; margin: 10px auto; }
+.hd_cont_c .tit_hd { font-size: 24px; color: #fff; text-align: center; background: #574141; line-height: 60px; border-top: 1px solid #191919; border-bottom: 1px solid #191919; position: relative; }
+.hd_cont_c .tit_sub { position: absolute; right: 10px; top: 4px; }
+.hd_cont_c .tit_goback { position: absolute; left: 10px; top: 4px; }
+.hd_cont_c table h1 { font-size: 24px; margin:10px auto 5px;}
+.hd_cont_c .cen_ht { margin-top: 20px; overflow: hidden; }
+.mar30 { margin-bottom: 30px; }
+.bottom { height: 98px; text-align: left; padding: 40px 0px; background: url(../images/copyrightimg.jpg) no-repeat; color: #535353; }
+.logo_img { width: 422px; height: 98px; background: url(../images/logo_img.png) no-repeat; float: left; }
+.copyright { width: 1000px; margin: 0px auto; text-align: left; line-height: 24px; }
+
+.side_nav { position: fixed; left: 50%;bottom: 10px; margin-left: 505px;z-index: 20;}
+.side_nav a { background:url(../images/gotop.png) no-repeat;display: block; width: 50px; height:50px; margin-bottom: 7px; }
+.side_nav a.service{ background-position:0px 0px;}
+.side_nav a.backtop{ background-position:0px -57px;}
+
+.side_nav a.service:hover{ background-position:-56px 0px;}
+.side_nav a.backtop:hover{ background-position:-56px -57px;}
+
+.pop-ups{display:none;}
+.pop-ups{display:none;}
+.subbtn{background: url(../images/search.png) top center no-repeat; text-align: center; width: 234px; height: 44px; border:none;border-radius: 2px; color: #fff; cursor: pointer;padding: 0; margin-left:115px;}
+.pop-ups .pages{ width:90px; margin:0 auto; margin-top:20px;}
+.pop-ups .pages a{ display:block; width:20px; height:20px; line-height:20px; text-align:center; background:#676767; float:left; margin:0 5px;}
+
+.pop-ups .con2{display: none;    height: 200px;
+    overflow-y: auto;}
+.pop-ups .con2 table{width: 600px; margin: 0 auto;}
+.pop-ups .con2 table tr td{border: 1px solid #545454;height: 40px;line-height: 40px;color: #959595; font-size: 14px;padding-left: 20px;}
+
+ */
+
+

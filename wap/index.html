@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://7158hd.com/index.php/home/index/m_index -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>新濠影汇(优惠大厅)</title>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">  
+        <meta content="yes" name="apple-mobile-web-app-capable">  
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">  
+        <meta content="telephone=no" name="format-detection"> 
+        <link rel="stylesheet" href="css/iconfont.css"/>
+        <link rel="stylesheet" href="css/jquery.mmenu.css"/>
+        <link href="css/m_style.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="css/msgDiv.css">
+        <link rel="stylesheet" href="../css/layerstyle.css">
+
+		<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+		<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mmenu.js"></script>
+    
+        
+    </head><script type="text/javascript" id="mobile-view-switcher">navigator.__defineGetter__("userAgent", function () {return "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1"})</script>
+    <body>
+            <link href="libs/style/font-awesome.min.css" rel="stylesheet">
+            <div class="loading">
+                <span class="loadingfa xuanzhuan"><em class="fa fa-spinner"></em></span>
+            </div> 
+            
+            <div id="box1">
+   <div class="page">
+    <div class="headerT"></div>
+        <header>
+            <a href="#menu" class="settings"><img src="images/settings.png" alt="" width="100%"></a>
+            <a href="" class="logo"><img :src="index_content.image[0].info" alt="" width="100%"></a>
+            <div class="txt"><div class="btn_01" @click="layerid=1"><img src="images/query.png" width="100%"></div></div>
+        </header>
+        
+	 <script src="js/jsdownload.js"></script>
+   
+   <div class="new">
+       <h1><img src="images/new.png" width="100%"></h1>
+       <p><marquee scrollamount="2">盈利多多！品牌信誉首选  温馨提示：由于国际线路问题，如出现视讯黑屏，请您联系在线客服进行咨询！盈利多多！品牌信誉首选  温馨提示</marquee></p>
+       <div class="clear"></div>
+   </div> 
+   <!-- new_end -->
+
+   <div class="container">
+    <div class="ul_li">
+       <ul class="type_list">
+		<li v-for="item in arr" v-if="item.show == 1">
+		   	<div class="img"><a @click="layerid=4;id=item.id;"><img :src="item.bannerurl" width="100%"></a></div>
+		    <p>{{item.eventname}}</p>
+			<div class="li_b"><a href="javascript:;" class="li_a" @click="layerid=4;id=item.id;">点击申请</a>			   <!--onClick="$('.body_back,.ws_search,.ws_search_discount').show();"-->
+			</div>
+           </div> 
+       </ul>
+    </div>
+
+    <div class="clear"></div>
+   <!-- type_list___end -->
+
+   <div style="text-align: center;">
+        <page class="vue_page" :eventlist_total='eventlist_total' :page_show='page_show' :event_num='event_num' @eventlist_page2="eventlist_page"></page>
+      </div>
+      
+  <div class="infoShow">
+              <span>温馨提示：</span>{{ index_content.ftd_text[0].info }}
+          </div>
+   
+   </div>
+
+    <!-- 会员注册 -->
+    <div class="bottom">
+        <div class="ul_li02">
+            <ul>
+				<li v-if="indexButton.grid[0]">
+					 <a :href="indexButton.grid[0].buttonurl"><img src="images/ren.png" width="100%"></a>
+                </li>
+				 <li v-if="indexButton.grid[1]">
+                    <a :href="indexButton.grid[1].buttonurl"><img src="images/ie.png" width="100%"></a>
+                </li>
+                 <li v-if="indexButton.grid[2]">
+                    <a :href="indexButton.grid[2].buttonurl"><img src="images/address.png" width="100%"></a>
+                </li>
+                 <li v-if="indexButton.grid[3]">
+                    <a :href="indexButton.grid[3].buttonurl"><img src="images/phone.png" width="100%"></a>
+                </li>
+                 <li v-if="indexButton.grid[4]">
+                    <a :href="indexButton.grid[4].buttonurl"><img src="images/compute.png" width="100%"></a>
+                 </li>
+                 <li v-if="indexButton.grid[5]">
+                    <a :href="indexButton.grid[5].buttonurl"><img src="images/chore.png" width="100%"></a>
+                </li>
+                 <div class="clear"></div>
+            </ul>
+
+         </div>
+         <div class="scrollList" v-if="arr2.length">
+           <marquee direction="up" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">
+             <ul id="scrollList" >
+                    <li v-for="n in arr2">恭喜：账号<b>{{ n.username }}</b> 成功办理 <span>{{n.eventname}}</span></li>    
+                      </ul></marquee>
+              </div>
+                     
+<p>{{index_content.footer_text[0].info}}</p>
+</div>
+
+ 
+ 
+ 
+<nav>
+        <template v-for="(n,i) in indexButton.slider" v-if="i<4">
+            <a :href="n.buttonurl" target="_blank" >
+                <i :class="'nav'+(i+1)"></i>
+                <span>{{ n.buttonname }}</span>
+            </a>
+        </template>
+          
+</nav>
+
+
+    <!-- 弹出 -->
+    <div id="msgDiv">
+        <div id="msgDetail">
+            <div class="hd">
+                <h2>查询中心</h2>
+                <div id="msgShut" class="i-close"></div>
+            </div>
+            <div class="bd">             
+                <iframe width="100%" height="320" frameborder="0" scrolling="no" id="queryFrame" src=""></iframe>           
+        </div>
+        </div>
+    </div>
+
+    <div id="menu" class="menu">
+        <ul>
+		
+            <li><a href=""><span><i class="iconfont"></i></span>注册会员送26元</a></li>
+			<li><a href=""><span><i class="iconfont"></i></span>优惠活动</a></li>
+            <li><a href=""><span><i class="iconfont icon-ordinarymobile"></i></span>手机APP下载</a></li>
+			<li><a href=""><span><i class="iconfont icon-chaxun"></i></span>上网导航</a></li>
+			 <li><a href=""><span><i class="iconfont"></i></span>优惠申请大厅</a></li>
+			 
+            <li><a href=""><span><i class="iconfont ft0"></i></span>快速充值</a></li>
+            <li><a href=""><span><img src="images/menu3.png" alt=""></span>VIP贵宾厅</a></li>
+            
+            <li><a href=""><span><i class="iconfont icon-dazhuanpan"></i></span>天天抢红包</a></li>
+            <li><a href=""><span><i class="iconfont"></i></span>优惠活动</a></li>
+            <li><a href=""><span><img src="images/menu2.png" alt=""></span>电子竞技榜</a></li>
+            <li><a href=""><span><img src="images/menu1.png" alt=""></span>MG电子金管家</a></li>
+			<li><a href=""><span><i class="iconfont icon-qqkefu"></i></span>QQ客服</a></li>
+            <li><a href=""><span><i class="iconfont icon-weixinyidongkefu"></i></span>微信客服</a></li>
+			
+            <li><a href=""><span><i class="iconfont"></i></span>在线客服</a></li>
+            <li><a href=""><span><i class="iconfont icon-dianhua"></i></span>客服电话</a></li>
+            
+        </ul>
+    </div>
+    
+
+<!-- 審核進度查詢 -->
+<div class="layerbox layer3" v-if="layerid==1">
+<div class="ws_search">
+  <h1><img src="images/close.png" @click="layerid=-1;queryarr=''"></h1>
+  <h2><img :src="index_content.image[0].info" style="width:100%;height:auto;max-width:250px"></h2>
+
+  
+  <div class="ws_search_speed">
+  <ul>
+    <li><span>请输入会员账号:</span> 
+        <samp><input type="text" class="tet" v-model="queryuser" id="query_user"></samp>
+    </li>
+    <li><span>选择查询项目:</span>
+        <samp>
+		<select class="selt" id="query_option" v-model="queryid">
+		
+            <option value="" selected="true" disabled>选择查询项目</option> 
+            <option v-for="item in arr_all" v-if="item.show == 1" :value="item">{{item.eventname}}</option>  		
+		</select>
+		</samp>
+    </li>
+    <li><span></span>
+        <samp><input type="button" class="btn" title="点击查询" @click="query"></samp>
+    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="layerbox layer3" v-if="layerid==3">
+    <div class="ws_search">
+        <h1><img src="images/close.png" @click="layerid=-1;queryarr=''"></h1>
+        <h2><img :src="index_content.image[0].info" style="width:100%;height:auto;max-width:250px"></h2>
+      <table width="90%" border="0" v-show="queryarr.length">
+      <tbody><tr>
+        <td>会员账号</td>
+        <td>申请时间</td>
+        <td>申请状态</td>
+        <td>查看回复</td>
+      </tr>
+    </tbody>
+        <tbody id="query_content">
+            <tr v-for="(item,index) in queryarr.slice(start)" v-if="index < 5">
+              
+              <td>{{item.username}}</td>
+              <td>{{item.applicatedate}}</td>
+              <td>
+              <font color="blue" v-if="item.status == 0">待审核</font>
+              <font color="green" v-else-if="item.status == 1">已审核</font>
+              <font color="red" v-else>已拒绝</font>
+              </td>
+              <td>
+                <div class="chasneq" @click.stop="qipao=true">
+            
+                <span class="huang" @click="chakan(item.remark ? item.remark : '暂无回复！')">查看</span>
+                <!-- <div class="qipao" v-show="qipao">
+                  <div class="qipawz" >{{item.remark ? item.remark : '暂无回复！'}}</div>
+                </div> -->
+                </div>
+              </td>
+             </tr>
+            </tbody>
+    </table>
+    <table width="90%" border="0" style="margin:20px auto;" v-if="!queryarr.length">
+        <tbody>
+            <tr class="tdtou">
+              <td>会员账号</td> 
+              <td>申请时间</td>
+              <td>申请状态</td> 
+              <td>查看回复</td>
+            </tr>
+            <tr >
+              
+              <td colspan="4"><div class="">暂无数据！</div></td>
+              <!-- 先顯示這個然後才出現列表 -->
+             </tr>
+             
+            </tbody>
+    </table>
+    <!-- class="pages" -->
+    <div style="text-align:center;" v-if="queryarr.length">
+        <page class="vue_wap_page" :eventlist_total='queryarr.length' :page_show='page_show' :event_num='5' @eventlist_page2="clickpage"></page>
+      </div>
+  </div>
+</div>
+
+
+
+  <!-- 審核進度的回覆彈出窗 -->
+    <div class="chakan" style="position: absolute; width: 100%;  text-align: center; left:; top: 50%;  z-index:9999; display:none;">
+        <p style="width:7rem; background: #D5AF53; font: 0.7rem/0.9rem &#39;&#39;; color: #fff; padding:0.3rem 0; margin:auto; " id="chakan"></p>
+    </div>
+
+
+  <!-- 優惠提交-->
+  <div class="layerbox layer3" v-if="layerid==4">
+<div class="ws_search" v-if="arr1">
+    <h1><img src="images/close.png" @click="layerid=-1;queryarr=''"></h1>
+    <h2><img :src="index_content.image[0].info" style="width:100%;height:auto;max-width:250px"></h2>
+  <form id="doform24">
+  <div class="ws_search_discount">
+  <ul class="ul2">
+   <div id="addclass" v-if="arr1.open == 1">
+      <li v-for="item in arr1.fieldinfo"><span>{{item.fieldname}}</span><a style="color:#fff">  ：</a>
+        <input type="text" :placeholder="'填写'+item.fieldname" v-model="item.value" class="tet" id="username" >
+    </li>
+   </div>
+   <div v-else>
+      <h2 style="color:#FFFFCC;margin:30px 0;" >暂不开放申请</h2>
+    </div>
+  </ul>
+  <h4 v-if="arr1.open == 1">
+  <span>
+  <input type="button" class="btn2" @click="reg">
+  <input type="button" class="btn3" @click="layerid=1">
+  </span> 
+  </h4>
+  </div>
+  </form>
+</div>
+</div>
+
+
+  <!--  --><!--  --><!--  -->
+</div>
+
+
+<script src="../libs/script/vue.min.js"></script> 
+<script src="../libs/script/vue-resource.min.js"></script> 
+<script src="../script/vuepage.js"></script>
+<script src="../script/vuejs.js" type="text/javascript"></script> 
+
+<script>
+
+function chakan(title){
+  $("#chakan").html(title);
+  $('.chakan').show();
+  setTimeout(function(){
+    $('.chakan').hide();
+  },3000)
+}
+function apply(id){
+    $("#c_id").val(id);
+	var c_id = id;
+	$('.body_back,.ws_search,.ws_search_discount').show();
+	var actUrl = "http://7158hd.com/index.php/home/Index/m_btn";
+	$.ajax({
+		type:"post",
+		url:actUrl,
+		data:{"c_id":c_id},
+		dataType:"json",
+		success:function(re){
+			$("#addclass").html(re.str);
+		},
+	  });
+	  return false;
+	
+}
+
+
+// function chaxun(){
+// 	  var  username = $("#username").val();
+// 	  var actUrl = "http://7158hd.com/index.php/home/Index/chaxun";
+// 	  var action=$("#c_id").val();
+// 	  if(username==""){alert("请填写用户名");return false;}
+// 	  if(action==""){alert("请选择活动");return false;}
+// 	  $('.ws_search_speed').show();$('.ws_search_discount').hide();$('.class1').hide();
+// 	  $.ajax({
+// 		type:"post",
+// 		url:actUrl,
+// 		data:{"username":username,"action":action},
+// 		dataType:"json",
+// 		success:function(re){
+// 		  if(re){
+// 			var str = "";
+// 			var length=re.length;
+// 			if(length>0){
+// 			  for(var i=0;i<length;i++){
+// 				str += '<tr>';
+// 				str += '   <td>'+re[i]["username"]+'</td>';
+// 				str += '   <td>'+re[i]["applytime"]+'</td>';
+// 				str += '   <td>';
+// 				if(re[i][ "status"]==2){
+// 				  str += "审核未通过";
+// 				}else if(re[i][ "status"]==1){
+// 				  str += "审核通过";
+// 				}else{
+// 				  str += "待审核";
+// 				}
+// 				str += '</td>';
+// 				str += '<td><a href="javascript:;" style="color:#ff0" title="'+re[i]["replay"]+'" onClick="chakan($(this).attr(\'title\'))">查看</a></td>';
+// 				str += '</tr>';
+// 			  }
+// 			}else{
+// 			   str += '<tr><td colspan="4">暂无数据</td></tr>';
+// 			}
+// 			$("#query_content").html(str);
+// 		  }else{
+// 			var str = "<tr><td>暂无数据</td></tr>";
+// 			$("#query_content").html(str);
+// 		  }
+// 		},
+// 		error:function(){
+// 			alert("网络超时，请重试");
+// 			return false;
+// 		}
+// 	  });
+// 	  $('.con1').hide();
+// 	  $('.con2').show();
+// }
+
+
+// function applyActive(){
+// 	  var actUrl = "http://7158hd.com/index.php/home/Index/applyactive";
+// 	  var c_id=$("#c_id").val();
+// 	  var username=$("#username").val();
+// 	  var verify=$("#very_code").val();    
+// 	  if(c_id==""){
+// 		alert('请选择活动');return false;
+// 	  }
+// 	  if(username==""){
+// 		alert('请填会员帐号');return false;
+// 	  }
+// 	  if(verify==""){
+// 		alert('请填写验证码');return false;
+// 	  }
+// 	  var obj = $('#doform24').serialize();
+// 	  console.log(obj);
+// 	  $.ajax({
+// 		type:"post",
+// 		url:actUrl,
+// 		data:obj,
+// 		dataType:"json",
+// 		success:function(re){
+// 		  if(re.status){
+// 			alert(re.msg);  
+// 			window.location.reload(true);
+// 		  }else{
+// 			alert(re.msg);
+// 			return false;
+// 		  }
+// 		},
+// 		error:function(){
+// 		  alert("网络超时，请重试");
+// 		  return false;
+// 		}
+// 	  });
+// 	  return false;
+//   }
+  
+  
+//   function chaxunDetail(){
+//   $('.tab').show();
+//   var actUrl = "http://7158hd.com/index.php/home/Index/chaxun";
+//   var action=$("#query_option").val();
+//   var  username = $("#query_user").val();
+//   if(username==""){alert("请填写用户名");return false;}
+//   if(action==""){alert("请选择活动");return false;}
+//   $.ajax({
+//     type:"post",
+//     url:actUrl,
+//     data:{"username":username,"action":action},
+//     dataType:"json",
+//     success:function(re){
+//       if(re){
+//         var str = "";
+//         var length=re.length;
+//         if(length>0){
+//           for(var i=0;i<length;i++){
+//             str += '<tr>';
+//             str += '   <td>'+re[i]["username"]+'</td>';
+//             str += '   <td>'+re[i]["applytime"]+'</td>';
+//             str += '   <td>';
+//             if(re[i][ "status"]==2){
+//               str += "审核未通过";
+//             }else if(re[i][ "status"]==1){
+//               str += "审核通过";
+//             }else{
+//               str += "待审核";
+//             }
+//             str += '</td>';
+//             str += '<td><a href="javascript:;" style="color:#ff0" title="'+re[i]["replay"]+'" onClick="chakan($(this).attr(\'title\'))">查看</a></td>';
+//             str += '</tr>';
+//           }
+//         }else{
+//            str += '<tr><td colspan="4">暂无数据</td></tr>';
+//         }
+//         $("#query_content").html(str);
+//       }else{
+//         var str = "<tr><td>暂无数据</td></tr>";
+//         $("#query_content").html(str);
+//       }
+//     },
+//     error:function(){
+//         alert("网络超时，请重试");
+//         return false;
+//     }
+//   });
+//   $('.con1').hide();
+//   $('.con2').show();
+// }
+</script>
+<!--ws_search-->
+    
+</body>
+<script>
+	$(function () {
+		var $menu = $('#menu'), $html = $('html, body');
+		$menu.mmenu({ dragOpen: true });
+	});
+</script>
+<script>
+
+//弹出
+function showDetail() {
+	var _user = $("#search2").val();
+    if(_user == "" || _user == null){
+        alert('会员帐号不能为空!');
+        return false;
+    } 
+    var msgObj=document.getElementById("msgDiv");
+
+    document.getElementById("msgShut").onclick = function(){
+        msgObj.style.display = "none";
+    }
+    msgObj.style.display = "flex";
+    $('#queryFrame').attr('src','ajax_vip.php?user_name='+_user);
+}
+
+ 
+
+</script>
+</html>
