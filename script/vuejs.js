@@ -9,8 +9,6 @@ $(document).ready(function () {
 			el: '#box1',
 			data: {
 				hall_API:'../../req.sys.php',
-				// hall_API:'http://192.168.1.150/u0066/20190417_paul/req.sys.php',
-				// hall_API:'http://2dev.us/0028/hall/20190417/req.sys.php',
 				ip:'',
 				arr: [],
 				arr_all:[],
